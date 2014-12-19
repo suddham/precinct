@@ -10,10 +10,6 @@
 	background-image: url(../images/city-hero-bw.jpg);
 }
 
-#home-slide-3 {
-	background-image: url(../images/Home_slide3-comp.jpg);
-}
-
 /* --------------------------------------------------------- */
 /* !About Block */
 /* --------------------------------------------------------- */
@@ -199,6 +195,13 @@ li .double-text p:hover {
         padding: 0 20%;
     }
 }
+@media screen and (max-width: 1200px) and (min-width: 1100px) {
+    .double-text p,
+    .double-text.active p,
+    .double-text p:hover {
+        width: 110% !important;
+    }
+}
 
 @media screen and (max-width: 992px) {
     .double-text p, .double-text.active p, .double-text p:hover {
@@ -327,7 +330,7 @@ li .double-text p:hover {
 }
 @media screen and (max-height: 700) and (max-width: 1200px) {.about-btn {top: 1100%}}
 /******************about us media queries ******************/
-@media screen and (max-width: 991px){.logo-154{top:px}.precinct-bg-container{height:160%}}
+@media screen and (max-width: 991px){.logo-154{}.precinct-bg-container{height:160%}}
 @media screen and (max-width: 1500px){#about-precinct-text {font-size: 64px}}
 @media screen and (max-width:  1200px) {#about-precinct-text {letter-spacing: .25em;}}
 @media screen and (max-width: 991px) and (min-width:974px) {#about-precinct-text, .btn {letter-spacing: .2em;}.btn {font-size: 14px;} }
@@ -740,15 +743,22 @@ li .double-text p:hover {
 .map-text {border-bottom: none; width: 100%}
 .map-text:hover, .map-text.active {border: none; width: 100%; color: #fff}
 .map-slide {padding: 0 200px}
-.wow-image-container {position: relative; height: 900px;}
+.wow-image-container {position: relative; height: 900px; margin-top: -150px;}
 .map-text p {font-weight: 100;font-size: 13px;}
 .col-md-offset-2{ margin-bottom: 20px}
 
-.positional-image-slider-3 {padding-top: 50px}
+@media screen and (min-width:769px){
+    .location-margin-fix {
+        padding: 70px;
+    }
+}
+
+
+/*.positional-image-slider-3 {padding-top: 50px}*/
 /*.positional-image-slider-2 {margin-top: -30px}*/
 .location-content-margin-fix {margin: 0 0 50px 0}
 #location-slide1, #location-slide2 {
-    width:80%;
+    width:95%;
     display:block;
     position:absolute;
     left:0;
@@ -770,17 +780,27 @@ li .double-text p:hover {
 #location-carousel {
     width: 100%;
 }
+@media screen and (min-width: 1800px){
+    #location-slide1, #location-slide2 {top: 100%;width: 80%}
+}
 
+@media screen and (min-width: 1500px){#location-slide1, #location-slide2 {top: 120%}}
+@media screen and (min-width: 1400px){#location-slide1, #location-slide2 {top: 120%}}
+@media screen and (max-width: 1400px){#location-slide1, #location-slide2 {top: 105%}}
+@media screen and (min-width: 768px) and (max-width: 1200px) {#location {margin-bottom: -300px;}}
 @media screen and (max-width: 1200px) {
     .wow-image-container {
         height: 900px
     }
     .map {width: 100% !important;}
+    #location-slide1, #location-slide2 {top: 94%;}
+
+
 }
 
 @media screen and (max-width: 992px) {
     #location-slide1, #location-slide2 {
-        top: 30%;
+        top: 80%;
     }
     .list-unstyled {
         padding: 0 20px;
@@ -790,6 +810,8 @@ li .double-text p:hover {
         margin-bottom: 10px;
     }
 }
+@media screen and (max-width: 1400px){#location-slide1, #location-slide2 {top: 90%}}
+@media screen and (max-width: 862px){#location-slide1, #location-slide2 {top: 80%}}
 @media screen and (max-width: 768px) {
     .map-text {
         text-align: center !important;
@@ -799,27 +821,47 @@ li .double-text p:hover {
     .map-side-content h3 {
         font-size: 15px;
     }
+    #location-carousel {height: 700px; margin-bottom: -100px;}
+
+    .wow-image-container {margin-top: 0px}
+
+
+
     /*slider image padding and size change*/
     .positional-image {
         width: 100% !important;
-        margin: -100px 0;
+        /*margin: -100px 0;*/
     }
     .map-slide {
         padding: 0 50px;
     }
+    #location-slide1, #location-slide2 {
+        top: 45%;
+    }
 }
+@media screen and (max-width: 620px){#location-slide1, #location-slide2 { }#location-carousel {height: 600px;}}
 @media screen and (max-width: 540px) {
     .map-text p {
         padding: 0 10px
     }
     .map-text {padding: 0;}
     .map-slide {padding: 0 15px;}
-
+    #location-slide1, #location-slide2 {top: 45%;}
+}
+@media screen and (max-width: 520px) {
+    .button-style-fix {
+        /*top: 50%;*/
+    }
 }
 @media screen and (max-width: 400px) {
     #location {
         margin-bottom: -200px;
     }
+
+    #location-slide1, #location-slide2 {
+        top: 35%
+    }
+    #location-carousel {margin-bottom: 0}
 }
 
 
@@ -948,7 +990,7 @@ li .double-text p:hover {
     color:    #eee;
 }
 .gliese {
-    height: 40px;
+    height: 20px;
     float: right;
 }
 

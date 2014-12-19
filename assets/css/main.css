@@ -2688,7 +2688,7 @@ article.apex-format-tweet > *:last-child {
 	padding: 25px 0 0;
 }
 #site-footer > .container {
-	padding-top: 60px;
+	padding-top: 30px;
 }
 #apex-copyright,
 #apex-social-links {
@@ -2704,13 +2704,13 @@ article.apex-format-tweet > *:last-child {
     clear: right;
 }
 #site-footer a {
-	font-size: 12px;
+	font-size: 10px;
 	line-height: 18px;
-	color: inherit;
+	color: cyan;
 	text-decoration: underline;
 }
 #site-footer a:hover {
-	color: #fff;
+	color: darkcyan;
 }
 #apex-social-links > .wrapper {
 	text-align: center;

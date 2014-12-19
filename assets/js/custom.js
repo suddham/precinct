@@ -221,6 +221,77 @@ $(document).ready(function() {
     locationDiv.find('.slick-dots').addClass('button-style-fix');
 
 
+    var windowWidth, location1 = $('#location-slide1') , location2 = $('#location-slide2'), tabMap = $('#map-page'), localPage = $('#local-page');
+    $(window).resize(function(){
+        windowWidth = $(window).width();
+        //desktop resize
+        if(windowWidth > 1009){
+            location1.removeAttr('src');
+            location1.attr('src', "assets/images/hacks/connecting-bw.jpg");
+            location2.removeAttr('src');
+            location2.attr('src', "assets/images/hacks/connecting-color.jpg");
+
+            tabMap.removeAttr('src');
+            tabMap.attr('src', "assets/images/hacks/map.jpg");
+
+            localPage.removeAttr('src');
+            localPage.attr('src', "assets/images/hacks/local-connections.jpg");
+        }
+        //tablet resize
+        else if(windowWidth < 1009 && windowWidth > 769){
+            location1.removeAttr('src');
+            location1.attr('src', "assets/images/hacks/tablet-connecting-bw.jpg");
+            location2.removeAttr('src');
+            location2.attr('src', "assets/images/hacks/tablet-connecting-color.jpg");
+
+            tabMap.removeAttr('src');
+            tabMap.attr('src', "assets/images/hacks/tablet-map.jpg");
+
+            localPage.removeAttr('src');
+            localPage.attr('src', "assets/images/hacks/tablet-local.jpg");
+        }
+        //mobile
+        else if(windowWidth < 600){
+            location1.removeAttr('src');
+            location1.attr('src', "assets/images/hacks/mobile-connecting-bw.jpg");
+            location2.removeAttr('src');
+            location2.attr('src', "assets/images/hacks/mobile-connecting-color.jpg");
+
+            tabMap.removeAttr('src');
+            tabMap.attr('src', "assets/images/hacks/mobile-map.jpg");
+
+            localPage.removeAttr('src');
+            localPage.attr('src', "assets/images/hacks/mobile-local.jpg");
+        }
+    });
+
+        //on initial non re-sized load browser width
+        windowWidth = $(window).width();
+        if(windowWidth < 1009 && windowWidth > 769){
+            location1.removeAttr('src');
+            location1.attr('src', "assets/images/hacks/tablet-connecting-bw.jpg");
+            location2.removeAttr('src');
+            location2.attr('src', "assets/images/hacks/tablet-connecting-color.jpg");
+
+            tabMap.removeAttr('src');
+            tabMap.attr('src', "assets/images/hacks/tablet-map.jpg");
+
+            localPage.removeAttr('src');
+            localPage.attr('src', "assets/images/hacks/tablet-local.jpg");
+        }
+        //mobile
+        if(windowWidth < 600){
+            location1.removeAttr('src');
+            location1.attr('src', "assets/images/hacks/mobile-connecting-bw.jpg");
+            location2.removeAttr('src');
+            location2.attr('src', "assets/images/hacks/mobile-connecting-color.jpg");
+
+            tabMap.removeAttr('src');
+            tabMap.attr('src', "assets/images/hacks/mobile-map.jpg");
+
+            localPage.removeAttr('src');
+            localPage.attr('src', "assets/images/hacks/mobile-local.jpg");
+        }
 
 
     /*************************
@@ -232,10 +303,14 @@ $(document).ready(function() {
     trident = ua.indexOf('Trident/'), //newer ie
     ieNum = parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
 
-    console.log(firefox);
+
     if (firefox) {
-        console.log(true);
-        $('#location-slide1, #location-slide2').css('top', '30% !important');
+        $('#location-slide1').css('top', '20%');
+        $('#location-slide2').css('top', '20%');
+
+        if($(window).width() <= 768){
+
+        }
 
     }
 
